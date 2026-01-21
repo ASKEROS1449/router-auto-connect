@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Router Auto-Connect", 
+  "version": "6.9.0",
+  "description": "Автоматический поиск и открытие веб-интерфейсов (HTTP/HTTPS) на портах 80, 443, 8080, 8888 для служебных IP.",
+  "author": "Aykhan Askarov 791",
+  
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "action": {
+    "default_title": "Статус сканирования портов",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+
+  "permissions": [
+    "webNavigation",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
